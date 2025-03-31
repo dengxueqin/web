@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息流与 display 示例</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: SimSun, serif; /* 正文使用宋体 */
+            font-size: 16px; /* 四号字体，约 16px */
+        }
+
+        /* 标题样式 */
+        h1, h2, h3 {
+            color: darkblue; /* 标题使用深蓝色 */
+            text-align: center; /* 标题居中 */
+        }
+
+        /* 定义一个盒子样式 */
+        .box {
+            width: 200px; /* 内容宽度 */
+            height: 200px; /* 内容高度 */
+            padding: 20px; /* 内边距 */
+            border: 10px solid #333; /* 边框 */
+            margin: 30px; /* 外边距 */
+            background-color: #f0f0f0; /* 背景颜色 */
+        }
+
+        /* 信息流容器样式 */
+        .feed-container {
+            display: flex; /* 使用 flex 布局模拟信息流 */
+            flex-wrap: wrap; /* 允许元素换行 */
+            gap: 20px; /* 元素之间的间距 */
+        }
+
+        /* 信息流项样式 */
+        .feed-item {
+            display: inline-block; /* 内联块级元素 */
+            width: 200px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #eee; /* 浅灰色背景作为占位符 */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>狗狗展示</h1>
+    <div class="box">
+        这是一只可爱的比格熊犬。
+        <img src="https://gss0.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/faedab64034f78f0411e9ee176310a55b3191c8e.jpg" alt="图片 1" style="width: 100%; height: 150px; object-fit: cover;">
+    </div>
+    <!-- dog图片 -->
+    <div class="feed-container">
+        <div class="feed-item">
+            <h3>dog 1</h3>
+            <img src="https://c-ssl.dtstatic.com/uploads/item/201504/02/20150402H4547_f3PWN.thumb.400_0.jpeg" alt="图片 1" style="width: 100%; height: 150px; object-fit: cover;">
+            <p>这是第一只狗狗。</p>
+        </div>
+        <div class="feed-item">
+            <h3>dog 2</h3>
+            <img src="http://picn.huitu.com/pic/20161031/20161031055832088900_0.jpg" alt="图片 2" style="width: 100%; height: 150px; object-fit: cover;">
+            <p>这是第二只狗狗。</p>
+        </div>
+        <div class="feed-item">
+            <h3>dog 3</h3>
+            <img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=2116522694,2982862967&fm=173&s=DD84EC144C43C6054FE874CA0100C0B0&w=438&h=421&img.JPEG" alt="图片 3" style="width: 100%; height: 150px; object-fit: cover;">
+            <p>这是第三只狗狗。</p>
+        </div>
+    </div>
+</body>
+</html>
